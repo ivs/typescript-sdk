@@ -42,10 +42,10 @@ export declare class OrcaU64 {
      * Convert this OrcaU64 to number.
      * @returns number that equals to the OrcaU64's value & scale
      */
-    toNumber(): any;
+    toNumber(): number;
     /**
      * Convert this OrcaU64 to u64.
      * @returns u64 that equals to the OrcaU64 value
      */
-    toU64(): any;
+    toU64(): u64;
 }

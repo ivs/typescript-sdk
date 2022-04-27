@@ -1,3 +1,4 @@
+import { u64 } from "@solana/spl-token";
 import { Connection, PublicKey } from "@solana/web3.js";
 import { Instruction } from "../models/instruction";
 import { Owner } from "./key-utils";
@@ -15,5 +16,5 @@ export declare type ResolvedTokenAddressInstruction = {
  * @param wrappedSolAmountIn Optional. Only use for input/source token that could be SOL
  * @returns
  */
-export declare function resolveOrCreateAssociatedTokenAddress(connection: Connection, owner: Owner, tokenMint: PublicKey, wrappedSolAmountIn?: any): Promise<ResolvedTokenAddressInstruction>;
+export declare function resolveOrCreateAssociatedTokenAddress(connection: Connection, owner: Owner, tokenMint: PublicKey, wrappedSolAmountIn?: u64): Promise<ResolvedTokenAddressInstruction>;
 export declare function deriveAssociatedTokenAddress(walletAddress: PublicKey, tokenMint: PublicKey): Promise<PublicKey>;

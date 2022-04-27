@@ -1,9 +1,10 @@
-import { Keypair } from "@solana/web3.js";
+import { u64 } from "@solana/spl-token";
+import { Keypair, PublicKey } from "@solana/web3.js";
 import { OrcaPoolParams } from "../../../../model/orca/pool/pool-types";
 import { OrcaPoolToken } from "../../../pools";
 import { Instruction } from "../../models";
 import { Owner } from "../key-utils";
-export declare const createApprovalInstruction: (ownerAddress: PublicKey, approveAmount: u64, tokenUserAddress: PublicKey, userTransferAuthority?: any) => {
+export declare const createApprovalInstruction: (ownerAddress: PublicKey, approveAmount: u64, tokenUserAddress: PublicKey, userTransferAuthority?: Keypair | undefined) => {
     userTransferAuthority: Keypair;
 } & Instruction;
 export declare const createSwapInstruction: (poolParams: OrcaPoolParams, owner: Owner, inputToken: OrcaPoolToken, inputTokenUserAddress: PublicKey, outputToken: OrcaPoolToken, outputTokenUserAddress: PublicKey, amountIn: u64, minimumAmountOut: u64, userTransferAuthority: PublicKey, orcaTokenSwapId: PublicKey) => Promise<Instruction>;

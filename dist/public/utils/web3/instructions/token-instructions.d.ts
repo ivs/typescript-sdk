@@ -1,3 +1,4 @@
+import { u64 } from "@solana/spl-token";
 import { PublicKey } from "@solana/web3.js";
 import { Instruction } from "../..";
 import { ResolvedTokenAddressInstruction } from "../ata-utils";

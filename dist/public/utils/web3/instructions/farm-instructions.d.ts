@@ -1,3 +1,6 @@
+import { Aquafarm } from "@orca-so/aquafarm";
+import { u64 } from "@solana/spl-token";
+import { PublicKey } from "@solana/web3.js";
 import { Instruction } from "../..";
 import { Owner } from "../key-utils";
 export declare const createInitUserFarmInstruction: (farm: Aquafarm, userFarmPublicKey: PublicKey, owner: Owner) => Promise<Instruction>;

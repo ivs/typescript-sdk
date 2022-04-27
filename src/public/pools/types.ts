@@ -1,7 +1,7 @@
 import { u64 } from "@solana/spl-token";
 import { Keypair, PublicKey } from "@solana/web3.js";
 import Decimal from "decimal.js";
-import { OrcaU64 } from "..";
+import { OrcaU64, PoolTokenCount } from "..";
 import { TransactionPayload } from "../utils";
 
 export type DepositQuote = {
@@ -50,6 +50,9 @@ export type OrcaPool = {
    * @return Returns the supply of LP tokens for this pool
    */
   getLPSupply: () => Promise<OrcaU64>;
+
+  getReserves: () => Promise<PoolTokenCount>;
+
 
   /**
    * Get the latest quote to trade one token to another in this pool

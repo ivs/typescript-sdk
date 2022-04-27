@@ -7,6 +7,6 @@ export declare class Percentage {
     static fromDecimal(number: Decimal): Percentage;
     static fromFraction(numerator: u64 | number, denominator: u64 | number): Percentage;
     toString: () => string;
-    toDecimal(): any;
+    toDecimal(): Decimal;
     add(p2: Percentage): Percentage;
 }

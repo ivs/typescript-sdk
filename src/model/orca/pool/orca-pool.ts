@@ -89,6 +89,15 @@ export class OrcaPoolImpl implements OrcaPool {
     return OrcaU64.fromU64(amt, this.poolParams.poolTokenDecimals);
   }
 
+  public async getReserves(): Promise<PoolTokenCount> {
+    return getTokenCount(
+      this.connection,
+      this.poolParams,
+      this.getTokenA(),
+      this.getTokenB()
+    );
+  }
+
   public async getQuote(
     inputToken: OrcaToken,
     inputAmount: Decimal | OrcaU64,

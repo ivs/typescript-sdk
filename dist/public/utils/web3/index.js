@@ -15,3 +15,4 @@ __exportStar(require("./deserialize-account"), exports);
 __exportStar(require("./get-token-count"), exports);
 __exportStar(require("./transactions"), exports);
 __exportStar(require("./instructions"), exports);
+__exportStar(require("./key-utils"), exports);

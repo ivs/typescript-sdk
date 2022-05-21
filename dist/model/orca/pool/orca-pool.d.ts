@@ -5,7 +5,7 @@ import { OrcaU64, PoolTokenCount, OrcaPool, OrcaToken, OrcaPoolToken, Quote, Tra
 import { OrcaPoolParams } from "./pool-types";
 export declare class OrcaPoolImpl implements OrcaPool {
     private connection;
-    private poolParams;
+    poolParams: OrcaPoolParams;
     private orcaTokenSwapId;
     constructor(connection: Connection, network: Network, config: OrcaPoolParams);
     getTokenA(): OrcaPoolToken;

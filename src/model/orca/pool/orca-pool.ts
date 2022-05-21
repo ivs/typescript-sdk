@@ -39,7 +39,7 @@ import { OrcaPoolParams } from "./pool-types";
 
 export class OrcaPoolImpl implements OrcaPool {
   private connection: Connection;
-  private poolParams: OrcaPoolParams;
+  public poolParams: OrcaPoolParams;
   private orcaTokenSwapId: PublicKey;
 
   constructor(connection: Connection, network: Network, config: OrcaPoolParams) {

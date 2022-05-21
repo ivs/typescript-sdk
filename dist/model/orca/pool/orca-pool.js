@@ -34,6 +34,9 @@ class OrcaPoolImpl {
         this.orcaTokenSwapId =
             network === public_1.Network.MAINNET ? public_1.ORCA_TOKEN_SWAP_ID : public_1.ORCA_TOKEN_SWAP_ID_DEVNET;
     }
+    getPoolParams() {
+        return this.poolParams;
+    }
     getTokenA() {
         const tokenId = this.poolParams.tokenIds[0];
         return this.poolParams.tokens[tokenId];

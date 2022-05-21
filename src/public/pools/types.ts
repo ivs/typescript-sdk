@@ -2,6 +2,7 @@ import { u64 } from "@solana/spl-token";
 import { Keypair, PublicKey } from "@solana/web3.js";
 import Decimal from "decimal.js";
 import { OrcaU64, PoolTokenCount } from "..";
+import { OrcaPoolParams } from "../../model/orca/pool/pool-types";
 import { TransactionPayload } from "../utils";
 
 export type DepositQuote = {
@@ -20,6 +21,8 @@ export type WithdrawQuote = {
  * Allows interactions with an Orca liquidity pool.
  */
 export type OrcaPool = {
+
+  getPoolParams: () => OrcaPoolParams
   /**
    * Query the token of tokenA in this pool.
    * @returns Returns the token id of tokenA in this pool
